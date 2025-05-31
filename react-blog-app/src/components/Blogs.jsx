@@ -9,7 +9,7 @@ const Blogs = () => {
   const { loading, posts } = useContext(AppContext);
 
   return (
-    <div className='w-11/12 lg:w-7/12 flex flex-col mx-auto gap-3 my-4'>
+    <div className='w-10/12 lg:w-7/12 flex flex-col mx-auto gap-4 my-4'>
       {
         loading ? <Spinner /> :
           posts.length === 0 ?

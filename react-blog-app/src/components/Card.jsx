@@ -10,7 +10,7 @@ const Card = ({ post }) => {
       <p className='text-sm text-slate-600'>
         Posted on {post.date}
       </p>
-      <p className='text-[16px]'>{post.content}</p>
+      <p className='text-[15px]'>{post.content}</p>
       <div>
         {post.tags.map((tag) => {
           return <span key={tag.index} className='text-blue-800 cursor-pointer hover:underline'>#{tag} </span>
