@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import Spinner from './Spinner';
+import Card from './Card';
 
 const Blogs = () => {
 
@@ -8,35 +9,18 @@ const Blogs = () => {
   const { loading, posts } = useContext(AppContext);
 
   return (
-    <div className='flex flex-col'>
+    <div className='w-11/12 lg:w-7/12 flex flex-col mx-auto gap-3 my-4'>
       {
-        loading ?
-          (<Spinner />) :
-
-          (
-            posts.length === 0 ?
-              (<div className="fixed inset-0 grid place-items-center">
+        loading ? <Spinner /> :
+          posts.length === 0 ?
+            (
+              <div className="fixed inset-0 grid place-items-center">
                 <div>No Data found</div>
               </div>
-              ) :
-              (posts.map((post) => (
-                <div key={post.id}>
-                  <p>{post.title}</p>
-                  <p>
-                    By <span>{post.author}</span> on <span>{post.category}</span>
-                  </p>
-                  <p>
-                    Posted on {post.date}
-                  </p>
-                  <p>{post.content}</p>
-                  <div>
-                    {post.tags.map((tag) => {
-                      return <span key={tag.index}>#{tag}</span>
-                    })}
-                  </div>
-                </div>
-              )))
-          )
+            ) :
+            posts.map((post) => {
+              return <Card post={post} key={post.id} />
+            })
       }
     </div>
   )

@@ -1,9 +1,21 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({ post }) => {
   return (
-    <div>
-        
+    <div className='flex flex-col shadow rounded-2xl shadow-slate-500 p-2 gap-2'>
+      <p className='font-semibold text-[18px]'>{post.title}</p>
+      <p>
+        By <span className='text-red-700 font-semibold'>{post.author}</span> on <span className='text-purple-900 font-semibold'>{post.category}</span>
+      </p>
+      <p className='text-sm text-slate-600'>
+        Posted on {post.date}
+      </p>
+      <p className='text-[16px]'>{post.content}</p>
+      <div>
+        {post.tags.map((tag) => {
+          return <span key={tag.index} className='text-blue-800 cursor-pointer hover:underline'>#{tag} </span>
+        })}
+      </div>
     </div>
   )
 }
