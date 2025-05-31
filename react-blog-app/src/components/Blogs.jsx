@@ -8,14 +8,17 @@ const Blogs = () => {
   const { loading, posts } = useContext(AppContext);
 
   return (
-    <div>
+    <div className='flex flex-col'>
       {
         loading ?
           (<Spinner />) :
 
           (
             posts.length === 0 ?
-              (<div>No Data found</div>) :
+              (<div className="fixed inset-0 grid place-items-center">
+                <div>No Data found</div>
+              </div>
+              ) :
               (posts.map((post) => (
                 <div key={post.id}>
                   <p>{post.title}</p>

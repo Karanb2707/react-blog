@@ -6,17 +6,19 @@ import { AppContext } from "./context/AppContext"
 
 function App() {
 
-  const {fetchBlogPosts} = useContext(AppContext);
+  const { fetchBlogPosts } = useContext(AppContext);
 
   useEffect(() => {
     fetchBlogPosts();
   }, []);
 
   return (
-    <div>
-      <Header/>
-      <Blogs/>
-      <Footer/>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <Blogs />
+      </main>  
+      <Footer />
     </div>
   )
 }
