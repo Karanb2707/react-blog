@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "./baseurl";
 
-// step 1
+// step 1: Create Context
 export const AppContext = createContext();
 
 function AppContextProvider({ children }) {
@@ -33,7 +33,7 @@ function AppContextProvider({ children }) {
     // page change handling
     function handlePageChange(page) {
         setPages(page);
-        fetchBlogPosts();
+        fetchBlogPosts(page);
     }
 
     const value = {
@@ -49,7 +49,7 @@ function AppContextProvider({ children }) {
         handlePageChange
     }
 
-    // step 2
+    // step 2: Provide Context
     return <AppContext.Provider value={value}>
         {children}
     </AppContext.Provider>

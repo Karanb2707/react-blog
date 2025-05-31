@@ -4,7 +4,7 @@ import Spinner from './Spinner';
 
 const Blogs = () => {
 
-  // setp 3
+  // setp 3: Consume Context  
   const { loading, posts } = useContext(AppContext);
 
   return (
