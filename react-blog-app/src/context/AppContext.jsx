@@ -15,6 +15,7 @@ function AppContextProvider({ children }) {
         setLoading(true);
 
         let url = `${baseUrl}?page=${page}`;
+        
         if (tag) {
             url += `&tag=${tag}`;
         }
