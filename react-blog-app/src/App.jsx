@@ -2,6 +2,9 @@ import { useContext, useEffect } from "react"
 import { AppContext } from "./context/AppContext"
 import { Route, Routes, useLocation, useSearchParams } from "react-router-dom"
 import Home from "./pages/Home";
+import BlogPage from "./pages/BlogPage";
+import TagPage from "./pages/TagPage";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
 
@@ -32,7 +35,6 @@ function App() {
 
   return (
 
-    // 50 min
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/blogs/:blogId" element={<BlogPage />} />
