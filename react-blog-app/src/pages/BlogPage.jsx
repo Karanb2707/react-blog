@@ -7,8 +7,6 @@ import { baseUrl } from '../context/baseurl';
 
 const BlogPage = () => {
 
-  // 1 hr 16 min
-
   const [blog, setBlog] = useState(null);
   const [relatedBlogs, setRelatedBlog] = useState([]);
   const { setLoading } = useContext(AppContext);
@@ -26,7 +24,8 @@ const BlogPage = () => {
       const res = await fetch(url);
       const data = await res.json();
       setBlog(data.posts);
-      setRelatedBlog(data.relatedBlogs);
+      console.log(blog);
+      // setRelatedBlog(data.relatedBlogs);
     }
     catch (error) {
       console.log(error);
@@ -52,11 +51,11 @@ const BlogPage = () => {
 
       <h1>Related Blogs</h1>
 
-      {
+      {/* {
         relatedBlogs.map((relatedBlog) => {
           return <Card post={relatedBlog} key={relatedBlog.id}/>
         })
-      }
+      } */}
     </div>
   )
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import Blogs from '../components/Blogs';
+import Header from '../components/Header'
+import Blogs from '../components/Blogs'
+import Footer from '../components/Footer'
+
 
 const TagPage = () => {
 
@@ -12,7 +15,7 @@ const TagPage = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <div>
+      <div className=''>
         <button onClick={() => navigate(-1)}>
           Back
         </button>

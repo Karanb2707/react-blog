@@ -6,8 +6,7 @@ const Footer = () => {
   const { page, totalPages, handlePageChange } = useContext(AppContext)
 
   return (
-    <div className='flex items-center justify-evenly  p-2 sticky bottom-0 
-        inset-shadow-xs inset-shadow-slate-400 bg-amber-50'>
+    <div className='flex items-center justify-evenly p-2 sticky bottom-0 bg-amber-200'>
       <div className='flex gap-2'>
         {
           page > 1 &&

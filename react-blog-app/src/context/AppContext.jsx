@@ -41,7 +41,7 @@ function AppContextProvider({ children }) {
     // page change handling
     function handlePageChange(page) {
         setPages(page);
-        fetchBlogPosts(page);
+        fetchBlogPosts(page, tag, category);
     }
 
     const value = {
