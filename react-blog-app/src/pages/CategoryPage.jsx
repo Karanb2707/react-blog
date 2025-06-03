@@ -22,7 +22,9 @@ const CategoryPage = () => {
         </h1>
       </div>
 
-      <Blogs/>
+      <main className="flex-1">
+        <Blogs />
+      </main>
       <Footer />
     </div>
   )

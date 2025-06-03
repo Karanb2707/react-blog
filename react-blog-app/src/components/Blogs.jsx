@@ -15,7 +15,7 @@ const Blogs = () => {
           posts.length === 0 ?
             (
               <div className="fixed inset-0 grid place-items-center">
-                <div>No Data found</div>
+                <div className='text-2xl font-semibold'>Sorry, No Blogs Found!!</div>
               </div>
             ) :
             posts.map((post) => {
