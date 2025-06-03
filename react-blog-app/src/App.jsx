@@ -10,7 +10,7 @@ function App() {
 
   const { fetchBlogPosts } = useContext(AppContext);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const location = useLocation();
   
   useEffect(() => {
@@ -37,7 +37,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/blogs/:blogId" element={<BlogPage />} />
+      <Route path="/blog/:blogId" element={<BlogPage />} />
       <Route path="/tags/:tag" element={<TagPage />} />
       <Route path="/category/:category" element={<CategoryPage />} />
     </Routes>
