@@ -20,7 +20,7 @@ function AppContextProvider({ children }) {
             url += `&tag=${tag}`;
         }
         if (category) {
-            url += `&cateory=${category}`
+            url += `&category=${category}`
         }
 
         try {
@@ -39,7 +39,7 @@ function AppContextProvider({ children }) {
     }
 
     // page change handling
-    function handlePageChange(page) {
+    function handlePageChange(page, tag = null, category = null) {
         setPages(page);
         fetchBlogPosts(page, tag, category);
     }

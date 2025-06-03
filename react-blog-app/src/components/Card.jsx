@@ -16,8 +16,8 @@ const Card = ({ post }) => {
       </p>
       <p className='text-[15px]'>{post.content}</p>
       <div>
-        {post.tags.map((tag) => {
-          return <span key={tag.index} className='text-blue-800 cursor-pointer hover:underline' onClick={() => navigate(`/tags/${tag}`)}>#{tag} </span>
+        {post.tags.map((tag, index) => {
+          return <span key={index} className='text-blue-800 cursor-pointer hover:underline' onClick={() => navigate(`/tags/${tag}`)}>#{tag} </span>
         })}
       </div>
     </div>
