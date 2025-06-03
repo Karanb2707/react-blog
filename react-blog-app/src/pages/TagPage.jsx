@@ -9,18 +9,18 @@ const TagPage = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const tag = location.pathname.split('/').at(-1);
+  const tag = location.pathname.split('/').at(-1).replaceAll('%20', ' ');
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <div className=''>
-        <button onClick={() => navigate(-1)}>
+      <div className='flex items-center mt-4 gap-6 lg:ml-[300px] lg:justify-normal justify-center'>
+        <button onClick={() => navigate(-1)} className='py-1 px-3 border rounded-xl text-sm bg-red-600 text-white'>
           Back
         </button>
-        <h1>
-          Blogs Tagged <span>#{tag}</span>
+        <h1 className='text-2xl'>
+          Blogs Tagged <span className='text-blue-500 font-semibold'>#{tag}</span>
         </h1>
       </div>
 
