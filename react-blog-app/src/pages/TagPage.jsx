@@ -15,8 +15,8 @@ const TagPage = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <div className='flex items-center mt-4 gap-6 lg:ml-[300px] lg:justify-normal justify-center'>
-        <button onClick={() => navigate(-1)} className='py-1 px-3 border rounded-xl text-sm bg-red-600 text-white'>
+      <div className='flex items-center mt-4 gap-6 lg:ml-[330px] lg:justify-normal justify-center'>
+        <button onClick={() => navigate(-1)} className='py-1 px-4 ring ring-red-950 rounded-xl bg-red-600 text-white cursor-pointer'>
           Back
         </button>
         <h1 className='text-2xl'>

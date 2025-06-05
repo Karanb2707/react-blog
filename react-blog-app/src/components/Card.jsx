@@ -7,7 +7,7 @@ const Card = ({ post }) => {
 
   return (
     <div className='flex flex-col shadow rounded-2xl shadow-slate-500 p-2 gap-2'>
-      <p className='font-semibold text-[18px]'>{post.title}</p>
+      <p className='font-semibold text-[18px] cursor-pointer' onClick={() => navigate(`/blog/${post.id}`)}>{post.title}</p>
       <p>
         By <span className='text-red-700 font-semibold'>{post.author}</span> on <span className='text-purple-900 font-semibold cursor-pointer' onClick={() => navigate(`/category/${post.category}`)}>{post.category}</span>
       </p>
